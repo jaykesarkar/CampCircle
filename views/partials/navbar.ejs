@@ -1,0 +1,27 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white py-0">
+    <div class="container-fluid">
+        <a class="navbar-brand m-1" href="#">CampCircle</a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <div class="navbar-nav">
+                <!-- <a class="nav-link" href="">Home</a> -->
+                <a class="nav-link" href="/campgrounds">Campgrounds</a>
+                <a class="nav-link" href="/campgrounds/new">Create Campground</a>
+            </div>
+            <div class="navbar-nav ms-auto">
+                <% if (!currentUser) { %>
+                    <a class="nav-link btn btn-link me-1" href="/login">Login</a>
+                    <a class="nav-link btn btn-primary text-white" href="/signUp">Sign Up</a>
+                    <% } else { %>
+                        <a class="nav-link" href="/logout">Logout</a>
+                        <% } %>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!-- <a class="auth-modal-toggle  ms-2 me-1" data-auth-modal-tab="sign-in" style="">Login</a> -->

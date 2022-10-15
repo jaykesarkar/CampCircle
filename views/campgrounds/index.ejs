@@ -1,0 +1,59 @@
+<% layout("layouts/boilerplate") -%>
+
+    <header>
+        <div class="p-5 text-center bg-image" style="
+          background-image: url(https://images3.alphacoders.com/112/1129770.jpg);
+          height: 300px;">
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                        <h1 class="mb-3">Welcome To CampCircle</h1>
+                        <h3 class="mb-3">Life is best when you’re camping.
+                            Find one nearby
+                        </h3>
+                        <a class="btn btn-outline-light btn-lg" href="/signUp" role="button">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <% for(let camps of campgrounds) { %>
+                <div class="col-lg-4 col-md-6 col-sm-12 my-3">
+                    <div class="card border border-light display-grid h-100">
+                        <!-- <div class="card"> -->
+                        <div class="display-grid bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <!-- <img src="<%#  camps.images[0].url %>" class="img-fluid" crossorigin /> -->
+                            <%if(camps.images.length) {%>
+                                <img class="img-fluid" alt="" src="<%=camps.images[0].url%>">
+                                <% }else {%>
+                                    <img class="img-fluid" alt=""
+                                        src="https://res.cloudinary.com/dqwsyopvx/image/upload/v1665310744/CampTrill/rdui0pb40c6kpoqnvjk0.jpg"
+                                        crossorigin>
+                                    <% } %>
+                                        <a href="#!">
+                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);">
+                                            </div>
+                                        </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%=camps.title%>
+                            </h5>
+                            <p class="card-text">
+                                <%=camps.description%>
+                            </p>
+                            <p class="card-text">
+                                <%=camps.location%>
+                            </p>
+                        </div>
+                        <a class="btn btn-primary m-3" href="/campgrounds/<%=camps._id%>">View
+                            <%=camps.title%>
+                        </a>
+                    </div>
+                </div>
+                <%}%>
+        </div>
+    </div>
