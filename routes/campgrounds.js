@@ -19,7 +19,7 @@ router.post(
 	"/",
 	isLoggedIn,
 	upload.array("image"),
-	validateCampground,
+	// validateCampground,
 	AsyncWrapper(campgrounds.createCampground)
 );
 
@@ -39,7 +39,7 @@ router.put(
 	isLoggedIn,
 	isAuthor,
 	upload.array("image"),
-	validateCampground,
+	// validateCampground,
 	AsyncWrapper(campgrounds.updateCampground)
 );
 
