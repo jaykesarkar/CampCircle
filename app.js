@@ -111,11 +111,6 @@ app.use((err, req, res, next) => {
 	res.status(statuscode).render("error", { err });
 });
 
-process.on("uncaughtException", (err) => {
-	console.log(`Uncaught Exception: ${err.message}`);
-	process.exit(1);
-});
-
 // Server //
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
