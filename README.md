@@ -92,4 +92,4 @@ DATABASEURL = mongodb://localhost:27017/[your_database_name]
 
 ### Text Editor
 
-* [Visual Studio Code](https://code.visualstudio.com/) I'm in love with this :P
+* [Visual Studio Code](https://code.visualstudio.com/)
