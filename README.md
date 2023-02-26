@@ -3,7 +3,7 @@
 A Node. js Web Application
 
 ## Demo
-[https://camp-circle.cyclic.app/campgrounds]
+https://camp-circle.cyclic.app/campgrounds
 
 ## Installation
 
