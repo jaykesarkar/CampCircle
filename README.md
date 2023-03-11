@@ -2,7 +2,7 @@
 
 A Node. js Web Application
 
-## Demo
+## Live Preview
 https://camp-circle.cyclic.app/campgrounds <br>
 https://campcircle.onrender.com/campgrounds
 
